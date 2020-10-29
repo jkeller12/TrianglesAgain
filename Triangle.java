@@ -36,36 +36,26 @@ public class Triangle
 
     return PMeter;
   }
-public static void main(String[] args) {
-      double A = 0.0;
-      Point p1 = new Point(1, 2);
-      Point p2 = new Point(p1);
-      Point p3 = new Point(8, 3);
-      Point p4 = new Point(15, -3);
-
-      Triangle t1 = new Triangle(p1, p3, p4);
-
-      A = t1.getPerimeter();
-      boolean ABC = (A== 31.156681016476867);
-      System.out.println(ABC) ;
-  }
 
 
-/*
+
   public double getArea()
-  { double A = distance(x1,y1,x2,y2);
-    double B = distance(x2,y2,x3,y3);
-    double C= distance(x3,y3,x1,y1);
-    double semiP = perimeter(x1, y1, x2, y2, x3, y3)/2;
+  { double A = v1.distanceTo(v2);
+    double B = v2.distanceTo(v3);
+    double C = v3.distanceTo(v1);
+    double semiP = getPerimeter()/2;
     double Herons_Area = Math.sqrt(semiP*(semiP-A)*(semiP-B)*(semiP-C));
 
     return Herons_Area;
   }
+
   public  String classify()
   {
-    double A = distance(x1,y1,x2,y2);
-    double B = distance(x2,y2,x3,y3);
-    double C= distance(x3,y3,x1,y1);
+    double A = Math.round(10000.0*(v1.distanceTo(v2)))/10000.0;
+
+     double B =   Math.round(10000.0*(v2.distanceTo(v3)))/10000.0;
+
+     double C =   Math.round(10000.0*(v3.distanceTo(v1)))/10000.0;
 
     if (A==B && B == C)
     {
@@ -82,6 +72,11 @@ public static void main(String[] args) {
 
   }
 
+  public String toString()
+  {
+    
+  }
 
-*/
+
+
 }
