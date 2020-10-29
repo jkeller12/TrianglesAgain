@@ -1,5 +1,6 @@
 public class Triangle
 {
+
   // Instance variables
   private Point v1, v2, v3;
 
@@ -8,12 +9,19 @@ public class Triangle
 
   public Triangle(Point a, Point b, Point c)
   {
-    // DUH NOT SURE
+    v1 = a;
+    v2 = b;
+    v3 = c;
   }
 
   public Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
   {
     // UM IDK
+    v1 = new Point(x1, y1);
+    v2= new Point(x2, y2);
+    v3= new Point(x3, y3);
+
+
   }
 
   // Accessors
@@ -28,6 +36,21 @@ public class Triangle
 
     return PMeter;
   }
+public static void main(String[] args) {
+      double A = 0.0;
+      Point p1 = new Point(1, 2);
+      Point p2 = new Point(p1);
+      Point p3 = new Point(8, 3);
+      Point p4 = new Point(15, -3);
+
+      Triangle t1 = new Triangle(p1, p3, p4);
+
+      A = t1.getPerimeter();
+      boolean ABC = (A== 31.156681016476867);
+      System.out.println(ABC) ;
+  }
+
+
 /*
   public double getArea()
   { double A = distance(x1,y1,x2,y2);
