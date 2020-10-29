@@ -21,6 +21,7 @@ public class Point{
 
   public double getX()
   {
+
     return x;
   }
 
@@ -28,6 +29,28 @@ public class Point{
   {
     return y;
   }
+
+
+  public double distanceTo(Point other)
+  {
+    double Dx = Math.abs(other.x - getX());
+    double Dy = Math.abs(other.y - getY());
+    double Answer = Math.sqrt((Dx*Dx) + (Dy*Dy));
+    return Answer;
+
+
+  }
+
+  public boolean equals(Point other)
+  {
+    if (other.x == getX() && other.y == getY())
+    {
+      return true;
+    }
+    return false;
+
+  }
+
 
 
 
