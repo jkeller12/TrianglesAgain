@@ -43,7 +43,7 @@ public class Point{
 
   public boolean equals(Point other)
   {
-    if (other.x == getX() && other.y == getY())
+    if (other != null && (other.x == getX() && other.y == getY()))
     {
       return true;
     }
